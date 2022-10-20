@@ -1,4 +1,4 @@
-<p class="image__custom">{text-align: center;}
+<p class="image__custom">
   <a href="http://nestjs.com/" target="blank">
     <img src="logo.svg" alt="Nest Logo" />
   </a>
