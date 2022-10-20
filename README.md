@@ -1,6 +1,9 @@
 <svg fill="none" viewBox="0 0 800 400" width="800" height="400" xmlns="http://www.w3.org/2000/svg">
     <style>
-       .image__custom a{text-align: center;}
+       .image__custom
+            {
+            text-align: center;
+            }
     </style>
     <p class="image__custom">
       <a href="http://nestjs.com/" target="blank">
