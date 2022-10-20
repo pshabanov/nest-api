@@ -1,10 +1,8 @@
-<svg fill="none" viewBox="0 0 800 400" width="800" height="400" xmlns="http://www.w3.org/2000/svg">
-    <p class="image__custom">
-      <a href="https://github.com/sindresorhus/css-in-readme-like-wat/blame/main/header.svg">
-        <img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" />
-      </a>
-    </p>
-</svg>
+<p class="image__custom">{text-align: center;}
+  <a href="http://nestjs.com/" target="blank">
+    <img src="logo.svg" alt="Nest Logo" />
+  </a>
+</p>
 
 [circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
 [circleci-url]: https://circleci.com/gh/nestjs/nest
