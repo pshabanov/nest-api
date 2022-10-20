@@ -1,12 +1,6 @@
 <svg fill="none" viewBox="0 0 800 400" width="800" height="400" xmlns="http://www.w3.org/2000/svg">
-    <style>
-       .image__custom
-            {
-            text-align: center;
-            }
-    </style>
     <p class="image__custom">
-      <a href="http://nestjs.com/" target="blank">
+      <a href="https://github.com/sindresorhus/css-in-readme-like-wat/blame/main/header.svg">
         <img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" />
       </a>
     </p>
