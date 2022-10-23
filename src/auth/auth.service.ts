@@ -2,7 +2,7 @@ import {HttpException, HttpStatus, Injectable, UnauthorizedException} from '@nes
 import {CreateUserDto} from "../users/dto/create-user.dto";
 import {UsersService} from "../users/users.service";
 import {JwtService} from "@nestjs/jwt";
-import {hash, compare} from 'bcryptjs'
+import * as bcrypt from 'bcrypt';
 import {User} from "../users/users.model";
 
 @Injectable()
@@ -22,7 +22,7 @@ export class AuthService {
         if (candidate){
             throw new HttpException('Пользователь с таким email существует', HttpStatus.BAD_REQUEST)
         }
-        const hashPassword = await hash(userDto.password, 5)
+        const hashPassword = await bcrypt.hash(userDto.password, 5)
         const user = await this.userService.createUser({...userDto, password: hashPassword})
         return this.generateToken(user)
     }
@@ -36,7 +36,7 @@ export class AuthService {
 
     private async validateUser(userDto: CreateUserDto){
         const user = await this.userService.getUserByEmail(userDto.email)
-        const passwordEquals = await compare(userDto.password, user.password)
+        const passwordEquals = await bcrypt.compare(userDto.password, user.password)
         if (user && passwordEquals){
             return user
         }
